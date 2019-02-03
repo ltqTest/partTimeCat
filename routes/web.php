@@ -8,4 +8,5 @@ Auth::routes();
 
 
 Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
+Route::get('/users/{user}', 'UsersController@show')->name('users.show');
 
