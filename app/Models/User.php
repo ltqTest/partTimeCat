@@ -31,4 +31,13 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    /**
+     * 关联模型topic：用户与话题中间的关系是 一对多
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function topics()
+    {
+        return $this->hasMany(Topic::class);
+    }
 }
