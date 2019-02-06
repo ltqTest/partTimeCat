@@ -9,8 +9,10 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>@yield('title', '兼职喵') - 您身边的好兼职</title>
+    <meta name="description" content="@yield('description', setting('seo_description', 'PartTimeCat - 兼职喵。'))"/>
+    <meta name="keyword" content="@yield('keyword', setting('seo_keyword', 'PartTimeCat,兼职，开发者论坛'))"/>
+
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
