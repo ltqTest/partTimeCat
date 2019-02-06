@@ -17718,3 +17718,14 @@ body {
   line-height: 38px;
 }
 
+/* Reply List */
+
+.topic-reply a {
+  color: inherit;
+}
+
+.topic-reply .meta {
+  font-size: .9em;
+  color: #b3b3b3;
+}
+
