@@ -20,3 +20,5 @@ Route::get('topics/{topic}/{slug?}', 'TopicsController@show')->name('topics.show
 Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
 // 分类
 Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
+// 消息通知
+Route::resource('notifications', 'NotificationsController', ['only' => ['index']]);
