@@ -18,3 +18,4 @@ Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload
 Route::get('topics/{topic}/{slug?}', 'TopicsController@show')->name('topics.show');
 // 分类
 Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
+Route::resource('replies', 'RepliesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);

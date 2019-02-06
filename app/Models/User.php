@@ -42,6 +42,14 @@ class User extends Authenticatable
     }
 
     /**
+     * 关联Relay模型
+     */
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
+
+    /**
      * 验证用户权限
      * @param $model 模型
      * @return bool
