@@ -22,3 +22,6 @@ Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]
 Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
 // 消息通知
 Route::resource('notifications', 'NotificationsController', ['only' => ['index']]);
+
+//  后台 - 无权限控制
+Route::get('permission-denied', 'PagesController@permissionDenied')->name('permission-denied');
