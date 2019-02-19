@@ -28,6 +28,7 @@ $api->version(
 
         $api->group(
             [
+                // 节流中间件
                 'middleware' => 'api.throttle',
                 'limit' => config('api.rate_limits.sign.limit'),
                 'expires' => config('api.rate_limits.sign.expires'),
@@ -45,6 +46,15 @@ $api->version(
                 // 第三方登录
                 $api->post('socials/{social_type}/authorizations', 'AuthorizationsController@socialStore')
                     ->name('api.socials.authorizations.store');
+                // 登录
+                $api->post('authorizations', 'AuthorizationsController@store')
+                    ->name('api.authorizations.store');
+                // 刷新token
+                $api->put('authorizations/current', 'AuthorizationsController@updateToken')
+                    ->name('api.authorizations.update');
+                // 删除token
+                $api->delete('authorizations/current', 'AuthorizationsController@destroyToken')
+                    ->name('api.authorizations.destroy');
             }
         );
     }
