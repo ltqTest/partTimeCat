@@ -73,6 +73,9 @@ $api->version(
                 // 话题
                 $api->get('topics', 'TopicsController@index')
                     ->name('api.topics.index');
+                // 话题详情
+                $api->get('topics/{topic}', 'TopicsController@show')
+                    ->name('api.topics.show');
                 // 个人发表的话题
                 $api->get('users/{user}/topics', 'TopicsController@userIndex')
                     ->name('api.users.topics.index');
