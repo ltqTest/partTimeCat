@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6865817113c55ce335c1b05e2cc8bfe9",
+    "content-hash": "6cfa6f7112ad3d1920b74925313a3a11",
     "packages": [
         {
             "name": "cakephp/chronos",
@@ -5375,6 +5375,49 @@
                 "symfony"
             ],
             "time": "2018-11-21T21:40:54+00:00"
+        },
+        {
+            "name": "overtrue/laravel-query-logger",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/overtrue/laravel-query-logger.git",
+                "reference": "42fd1966877c827b4bd7783d87923ec9c9f4cf1b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/overtrue/laravel-query-logger/zipball/42fd1966877c827b4bd7783d87923ec9c9f4cf1b",
+                "reference": "42fd1966877c827b4bd7783d87923ec9c9f4cf1b",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Overtrue\\LaravelQueryLogger\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Overtrue\\LaravelQueryLogger\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "overtrue",
+                    "email": "anzhengchao@gmail.com"
+                }
+            ],
+            "description": "A dev tool to log all queries for laravel application.",
+            "time": "2018-11-26T08:41:52+00:00"
         },
         {
             "name": "phar-io/manifest",
