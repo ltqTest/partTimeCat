@@ -73,12 +73,18 @@ $api->version(
                 // 话题
                 $api->get('topics', 'TopicsController@index')
                     ->name('api.topics.index');
+                // 某个用户的话题
+                $api->get('users/{user}/topics', 'TopicsController@userIndex')
+                    ->name('api.users.topics.index');
                 // 话题详情
                 $api->get('topics/{topic}', 'TopicsController@show')
                     ->name('api.topics.show');
-                // 个人发表的话题
-                $api->get('users/{user}/topics', 'TopicsController@userIndex')
-                    ->name('api.users.topics.index');
+                // 话题回复列表
+                $api->get('topics/{topic}/replies', 'RepliesController@index')
+                    ->name('api.topics.replies.index');
+                // 某个用户的回复列表
+                $api->get('users/{user}/replies', 'RepliesController@userIndex')
+                    ->name('api.users.replies.index');
                 // 需要 token 验证的接口
                 $api->group(
                     ['middleware' => 'api.auth'],
