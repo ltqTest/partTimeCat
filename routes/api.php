@@ -119,6 +119,9 @@ $api->version(
                         // 未读通知统计
                         $api->get('user/notifications/stats', 'NotificationsController@stats')
                             ->name('api.user.notifications.stats');
+                        // 标记消息通知为已读
+                        $api->patch('user/read/notifications', 'NotificationsController@read')
+                            ->name('api.user.notifications.read');
                     }
                 );
             }
