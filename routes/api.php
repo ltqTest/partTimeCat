@@ -134,6 +134,8 @@ $api->version(
                         // 标记消息通知为已读
                         $api->patch('user/read/notifications', 'NotificationsController@read')
                             ->name('api.user.notifications.read');
+                        $api->put('user/read/notifications', 'NotificationsController@read')
+                            ->name('api.user.notifications.read.put');
                         // 当前登录用户权限
                         $api->get('user/permissions', 'PermissionsController@index')
                             ->name('api.user.permissions.index');
